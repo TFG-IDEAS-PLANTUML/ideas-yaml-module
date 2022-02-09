@@ -1,6 +1,7 @@
 package es.us.isa.ideas.controller.sample;
 
 import es.us.isa.ideas.module.common.AppResponse;
+import es.us.isa.ideas.module.common.AppResponse.Status;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import es.us.isa.ideas.module.controller.BaseLanguageController;
@@ -29,9 +30,21 @@ public class YamlLanguageController extends BaseLanguageController {
 
     @RequestMapping(value = "/format/{format}/checkLanguage", method = RequestMethod.POST)
     @ResponseBody
-    @Override
     public AppResponse checkLanguage(String format, String content, String fileUri, HttpServletRequest request) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+        AppResponse appResponse = new AppResponse();
+
+        boolean problems = false;
+
+        //System.out.println("CheckSyntax: " + res );
+        appResponse.setFileUri(fileUri);
+
+        if (problems) {
+            appResponse.setStatus(Status.OK_PROBLEMS);
+        } else {
+            appResponse.setStatus(Status.OK);
+        }
+
+        return appResponse;
     }
 
     @RequestMapping(value = "/convert", method = RequestMethod.POST)

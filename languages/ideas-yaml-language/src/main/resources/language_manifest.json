@@ -1,0 +1,27 @@
+{
+    "id": "ideas-yaml-language",
+    "extension": "yaml",
+    "name": "YAML",
+    "formats": [
+        {
+            "format": "yaml",
+            "editorModeId": "ace/mode/yaml",
+            "_editorModeURI": "mode-yaml.js",
+            "editorThemeId": "ace/theme/at",
+            "_editorThemeURI": "theme-at.js",
+            "checkLanguage": "false"
+        },
+        {
+            "format": "json",
+            "editorModeId": "ace/mode/json",
+            "_editorModeURI": "mode-json.js",
+            "editorThemeId": "ace/theme/at",
+            "_editorThemeURI": "theme-at.js",
+            "checkLanguage": "false"
+        }
+    ],
+    "operations": [],
+    "templateProjects": null,
+    "templateFiles": null,
+    "inspectorLoader": "function(loader, format) {}"
+}
