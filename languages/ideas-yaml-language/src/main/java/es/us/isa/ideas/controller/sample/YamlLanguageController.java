@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @version 1.0
  */
 @Controller
-@RequestMapping("/language")
+@RequestMapping("/ideas-yaml-language/language")
 public class YamlLanguageController extends BaseLanguageController {
 
     @RequestMapping(value = "/operation/{id}/execute", method = RequestMethod.POST)
